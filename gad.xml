@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="Go to Photo Album" height="250" scaling="false" />
+  <ModulePrefs title="gad" height="250" scaling="false" />
   <Content type="html">
   <![CDATA[
     <div style="text-align:center"><a
@@ -12,3 +12,4 @@
   ]]>
   </Content>
 </Module>
+
