@@ -6,7 +6,7 @@
     
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/ResponsiveSlides.js/1.53/responsiveslides.min.js"></script>
+<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/ResponsiveSlides.js/1.53/responsiveslides.min.js"></script>
 
   <div class="container"><div id='coin-slider' width=400 height=300></div></div>
 
