@@ -3,33 +3,11 @@
   <ModulePrefs title="gad" height="400" scaling="false" />
   <Content type="html">
   <![CDATA[
-    <head>
-<link rel="stylesheet" href="responsiveslides.css">
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-<script  type="text/javascript" src="responsiveslides.js"> </script>
-<style>
-body {background: transparent;}
+    
 
-/*.coin-slider { overflow: hidden; zoom: 1; position: relative; background-color:transparent}
-.coin-slider a{ text-decoration: none; outline: none; border: none; }
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script
 
-.cs-buttons { font-size: 0px; padding: 10px; float: left; }
-.cs-buttons a { margin-left: 5px; height: 10px; width: 10px; float: left; border: 1px solid #B8C4CF; color: #B8C4CF; text-indent: -1000px; }
-.cs-active { background-color: #B8C4CF; color: #FFFFFF; }
 
-.cs-title { width: 545px; padding: 10px; background-color: #000000; color: #FFFFFF; }
-
-.cs-prev, 
-.cs-next { background-color: #000000; color: #FFFFFF; padding: 0px 10px; }*/
-/* Prevent the slideshow from flashing on load */
-    #slides {
-      display: none
-    }
-
-</style>
-
-<body>
   <div class="container"><div id='coin-slider' width=400 height=300></div></div>
 
 <script type="text/javascript">
@@ -75,7 +53,7 @@ $('#coin-slider').responsiveSlides();
 </script>
 
 
-</body>
+
   ]]>
   </Content>
 </Module>
