@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="gad" height="350" scaling="false" />
+  <ModulePrefs title="gad" height="400" scaling="false" />
   <Content type="html">
   <![CDATA[
     <div style="text-align:center"><a
