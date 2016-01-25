@@ -3,12 +3,79 @@
   <ModulePrefs title="gad" height="400" scaling="false" />
   <Content type="html">
   <![CDATA[
-    <div style="text-align:center"><a
-      id="Riggs" title="My Photo Album" target="_blank"
-      href="http://picasaweb.google.com/doc.examples/ShelfBoy">
-      <img border="0" alt="Photo" src="https://dl.dropboxusercontent.com/u/460773/ELbqFVR.png" 
-      title="Click Here."></a>
-    </div>
+    <head>
+<link rel="stylesheet" href="responsiveslides.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<script  type="text/javascript" src="responsiveslides.js"> </script>
+<style>
+body {background: transparent;}
+
+/*.coin-slider { overflow: hidden; zoom: 1; position: relative; background-color:transparent}
+.coin-slider a{ text-decoration: none; outline: none; border: none; }
+
+.cs-buttons { font-size: 0px; padding: 10px; float: left; }
+.cs-buttons a { margin-left: 5px; height: 10px; width: 10px; float: left; border: 1px solid #B8C4CF; color: #B8C4CF; text-indent: -1000px; }
+.cs-active { background-color: #B8C4CF; color: #FFFFFF; }
+
+.cs-title { width: 545px; padding: 10px; background-color: #000000; color: #FFFFFF; }
+
+.cs-prev, 
+.cs-next { background-color: #000000; color: #FFFFFF; padding: 0px 10px; }*/
+/* Prevent the slideshow from flashing on load */
+    #slides {
+      display: none
+    }
+
+</style>
+
+<body>
+  <div class="container"><div id='coin-slider' width=400 height=300></div></div>
+
+<script type="text/javascript">
+
+//$("#coin-slider").hide();
+
+//var prefs = new _IG_Prefs();
+var rss="https://picasaweb.google.com/data/feed/base/user/107793413718694936117/albumid/6243671204235356865?alt=rss&kind=photo&hl=fr";
+var image_delay = 2000;
+
+var viewport={width:400,height:300};
+
+//alert(viewport.width);
+
+
+
+
+if(rss=="")
+    alert("le flux vers l'album est manquant");  
+  json = rss.replace('rss','json')+"&Duration=0&format=jsonp&callback=?";
+
+$.getJSON(json,
+  function(data) {
+  var img = new Image();
+  
+    $.each(data.feed.entry, function(i,item) {
+        img.src = item.media$group.media$thumbnail[2].url.replace("s288","s1600");
+        $("<img/>").attr(
+            {
+            src : item.media$group.media$thumbnail[2].url.replace("s288","s1600"),
+            width : viewport.width,
+            height : viewport.height
+        }).appendTo("#coin-slider");
+        /*if(item.title.$t.toLowerCase().indexOf(".jpg") < 0)
+            $("<span/>").html(item.title.$t).appendTo("#coin-slider");*/
+    })
+$('#coin-slider').responsiveSlides();
+
+    //$('#coin-slider').coinslider({ hoverPause: false , width: viewport.width, height : viewport.height, navigation: true, links : false, delay: image_delay });
+    //$("#coin-slider").show("scale",2000);
+  })
+  
+</script>
+
+
+</body>
   ]]>
   </Content>
 </Module>
