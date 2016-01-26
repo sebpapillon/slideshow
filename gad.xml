@@ -6,7 +6,7 @@
     <style>
 body {background: transparent;}
 
-/*.coin-slider { overflow: hidden; zoom: 1; position: relative; background-color:transparent}
+.coin-slider { overflow: hidden; zoom: 1; position: relative; background-color:transparent}
 .coin-slider a{ text-decoration: none; outline: none; border: none; }
 
 .cs-buttons { font-size: 0px; padding: 10px; float: left; }
@@ -16,7 +16,7 @@ body {background: transparent;}
 .cs-title { width: 545px; padding: 10px; background-color: #000000; color: #FFFFFF; }
 
 .cs-prev, 
-.cs-next { background-color: #000000; color: #FFFFFF; padding: 0px 10px; }*/
+.cs-next { background-color: #000000; color: #FFFFFF; padding: 0px 10px; }
 /* Prevent the slideshow from flashing on load */
     #slides {
       display: none
