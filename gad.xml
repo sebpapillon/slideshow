@@ -18,8 +18,8 @@ body {background: transparent;}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/ResponsiveSlides.js/1.53/responsiveslides.min.js"></script>
 
-  <div class="container"><div id='coin-slider' width=400 height=300></div></div>
-  <div>Version 0.2</div>
+  <div class="container"><div id='coin-slider' width=200 height=100></div></div>
+  <div>Version 0.3</div>
 
 <script type="text/javascript">
 
