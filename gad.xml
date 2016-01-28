@@ -21,7 +21,13 @@ body {background: transparent;}
     #slides {
       display: none
     }
-
+.rslides {
+  display: block;
+  height: auto;
+  float: left;
+  width: 30;
+  border: 0;
+  }
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
