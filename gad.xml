@@ -19,7 +19,7 @@ body {background: transparent;}
 <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/ResponsiveSlides.js/1.53/responsiveslides.min.js"></script>
 
   <div class="container"><div id='coin-slider' width=200 height=100></div></div>
-  <div>Version 0.3</div>
+  <div>Version 0.4</div>
 
 <script type="text/javascript">
 
@@ -29,7 +29,7 @@ body {background: transparent;}
 var rss="https://picasaweb.google.com/data/feed/base/user/107793413718694936117/albumid/6243671204235356865?alt=rss&kind=photo&hl=fr";
 var image_delay = 2000;
 
-var viewport={width:400,height:300};
+var viewport={width:200,height:100};
 
 //alert(viewport.width);
 
