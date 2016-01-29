@@ -17,14 +17,9 @@ body {background: transparent;}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/ResponsiveSlides.js/1.53/responsiveslides.min.js"></script>
-
-  
-  <div>v0.7</div>
-  <div></div>
-  
-  <ul class="rslides" id="coin-slider"></ul>
-  
-
+<div>v0.8</div>
+<div></div>
+<ul class="rslides" id="coin-slider"></ul>
 <script type="text/javascript">
 
 //$("#coin-slider").hide();
@@ -36,10 +31,6 @@ var image_delay = 2000;
 var viewport={width:300,height:200};
 
 //alert(viewport.width);
-
-
-
-
 if(rss=="")
     alert("le flux vers l'album est manquant");  
   json = rss.replace('rss','json')+"&Duration=0&format=jsonp&callback=?";
@@ -55,8 +46,8 @@ $.getJSON(json,
 				$("<img/>").attr(
             {
             src : item.media$group.media$thumbnail[2].url.replace("s288","s1600"),
-            //width : viewport.width,
-            //height : viewport.height
+            width : viewport.width,
+            height : viewport.height
         })));
         /*if(item.title.$t.toLowerCase().indexOf(".jpg") < 0)
             $("<span/>").html(item.title.$t).appendTo("#coin-slider");*/
@@ -68,9 +59,6 @@ $('#coin-slider').responsiveSlides({pager: true});
   })
   
 </script>
-
-
-
   ]]>
   </Content>
 </Module>
