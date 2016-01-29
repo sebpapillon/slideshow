@@ -19,7 +19,7 @@ body {background: transparent;}
 <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/ResponsiveSlides.js/1.53/responsiveslides.min.js"></script>
 
   <div class="container"><div id='coin-slider' width=200 height=100></div></div>
-  <div>Version 0.4</div>
+  <div>Version 0.5</div>
 
 <script type="text/javascript">
 
