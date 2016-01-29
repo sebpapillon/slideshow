@@ -17,7 +17,7 @@ body {background: transparent;}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/ResponsiveSlides.js/1.53/responsiveslides.min.js"></script>
-<div>v0.8</div>
+<div>v0.9</div>
 <div></div>
 <ul class="rslides" id="coin-slider"></ul>
 <script type="text/javascript">
@@ -42,13 +42,7 @@ $.getJSON(json,
     $.each(data.feed.entry, function(i,item) {
         img.src = item.media$group.media$thumbnail[2].url.replace("s288","s1600");
         $("#coin-slider").append(
-			$("<li>").append(
-				$("<img/>").attr(
-            {
-            src : item.media$group.media$thumbnail[2].url.replace("s288","s1600"),
-            width : viewport.width,
-            height : viewport.height
-        })));
+			$("<li>").append("<img src="+img.src+"><p class=\"caption\">ninja</p>"));
         /*if(item.title.$t.toLowerCase().indexOf(".jpg") < 0)
             $("<span/>").html(item.title.$t).appendTo("#coin-slider");*/
     })
