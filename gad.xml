@@ -18,8 +18,12 @@ body {background: transparent;}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/ResponsiveSlides.js/1.53/responsiveslides.min.js"></script>
 
+  
+  <div>v0.7</div>
+  <div></div>
+  
   <ul class="rslides" id="coin-slider"></ul>
-  <div>Version 0.6</div>
+  
 
 <script type="text/javascript">
 
