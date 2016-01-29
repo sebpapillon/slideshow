@@ -22,8 +22,8 @@ body {background: transparent;}
   <div>Version 0.2</div>
 
 <ul class="rslides">
-  <li><img width=50 src="https://lh3.googleusercontent.com/-P15kae_pnE4/VqX54ffBKPI/AAAAAAABXOs/Yiffx1bTHn0/s1600/IMG_20151220_153015403.jpg" alt=""></li>
-  <li><img src="https://lh3.googleusercontent.com/-eH0kNWwy5LU/VqX54VZXH4I/AAAAAAABXOs/dSGVTLhoTwI/s1600/IMG_20151220_144913405.jpg" alt=""></li>
+  <li><img width=300 src="https://lh3.googleusercontent.com/-P15kae_pnE4/VqX54ffBKPI/AAAAAAABXOs/Yiffx1bTHn0/s1600/IMG_20151220_153015403.jpg" alt=""></li>
+  <li><img width=300 src="https://lh3.googleusercontent.com/-eH0kNWwy5LU/VqX54VZXH4I/AAAAAAABXOs/dSGVTLhoTwI/s1600/IMG_20151220_144913405.jpg" alt=""></li>
 </ul>
 
 <script>
