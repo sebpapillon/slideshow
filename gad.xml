@@ -55,7 +55,7 @@ $.getJSON(json,
         /*if(item.title.$t.toLowerCase().indexOf(".jpg") < 0)
             $("<span/>").html(item.title.$t).appendTo("#coin-slider");*/
     })
-$('#coin-slider').responsiveSlides();
+$('#coin-slider').responsiveSlides({pager: true});
 
     //$('#coin-slider').coinslider({ hoverPause: false , width: viewport.width, height : viewport.height, navigation: true, links : false, delay: image_delay });
     //$("#coin-slider").show("scale",2000);
