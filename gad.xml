@@ -29,7 +29,7 @@ body {background: transparent;}
 var rss="https://picasaweb.google.com/data/feed/base/user/107793413718694936117/albumid/6243671204235356865?alt=rss&kind=photo&hl=fr";
 var image_delay = 2000;
 
-var viewport={width:200,height:100};
+var viewport={width:300,height:200};
 
 //alert(viewport.width);
 
