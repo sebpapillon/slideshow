@@ -30,7 +30,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/ResponsiveSlides.js/1.53/responsiveslides.min.js"></script>
-<div>v0.3</div>
+<div>v0.4</div>
 <div></div>
 <ul class="rslides" id="coin-slider"></ul>
 <script type="text/javascript">
@@ -41,7 +41,7 @@
 var rss="https://picasaweb.google.com/data/feed/base/user/107793413718694936117/albumid/6243671204235356865?alt=rss&kind=photo&hl=fr";
 var image_delay = 2000;
 
-var viewport={width:300,height:200};
+var viewport={width:400,height:300};
 
 //alert(viewport.width);
 if(rss=="")
@@ -55,11 +55,11 @@ $.getJSON(json,
     $.each(data.feed.entry, function(i,item) {
         img.src = item.media$group.media$thumbnail[2].url.replace("s288","s1600");
         $("#coin-slider").append(
-			$("<li>").append("<img src="+img.src+" width="+viewport.width+"><p class = caption><a href=google.com>caption pour la photo</a></p>"));
+			$("<li>").append("<img src="+img.src+" width="+viewport.width+"><p class = caption>caption pour la photo</p>"));
         /*if(item.title.$t.toLowerCase().indexOf(".jpg") < 0)
             $("<span/>").html(item.title.$t).appendTo("#coin-slider");*/
     })
-$('#coin-slider').responsiveSlides({nav: true});
+$('#coin-slider').responsiveSlides();
 
     //$('#coin-slider').coinslider({ hoverPause: false , width: viewport.width, height : viewport.height, navigation: true, links : false, delay: image_delay });
     //$("#coin-slider").show("scale",2000);
