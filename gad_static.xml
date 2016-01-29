@@ -19,10 +19,10 @@ body {background: transparent;}
 <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/ResponsiveSlides.js/1.53/responsiveslides.min.js"></script>
 
   <div class="container"><div id='coin-slider' width=200 height=100></div></div>
-  <div>Version 0.4</div>
+  <div>Version 0.2</div>
 
 <ul class="rslides">
-  <li><img src="https://lh3.googleusercontent.com/-P15kae_pnE4/VqX54ffBKPI/AAAAAAABXOs/Yiffx1bTHn0/s1600/IMG_20151220_153015403.jpg" alt=""></li>
+  <li><img width=50 src="https://lh3.googleusercontent.com/-P15kae_pnE4/VqX54ffBKPI/AAAAAAABXOs/Yiffx1bTHn0/s1600/IMG_20151220_153015403.jpg" alt=""></li>
   <li><img src="https://lh3.googleusercontent.com/-eH0kNWwy5LU/VqX54VZXH4I/AAAAAAABXOs/dSGVTLhoTwI/s1600/IMG_20151220_144913405.jpg" alt=""></li>
 </ul>
 
