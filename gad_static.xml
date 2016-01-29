@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="gad" height="400" scaling="false" />
+  <Content type="html">
+  <![CDATA[
+    <style>
+body {background: transparent;}
+
+.rslides {
+  display: block;
+  height: auto;
+  float: left;
+  width: 10%;
+  border: 0;
+  }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/ResponsiveSlides.js/1.53/responsiveslides.min.js"></script>
+
+  <div class="container"><div id='coin-slider' width=200 height=100></div></div>
+  <div>Version 0.4</div>
+
+<script type="text/javascript">
+
+//$("#coin-slider").hide();
+
+//var prefs = new _IG_Prefs();
+var rss="https://picasaweb.google.com/data/feed/base/user/107793413718694936117/albumid/6243671204235356865?alt=rss&kind=photo&hl=fr";
+var image_delay = 2000;
+
+var viewport={width:200,height:100};
+
+//alert(viewport.width);
+
+
+
+
+if(rss=="")
+    alert("le flux vers l'album est manquant");  
+  json = rss.replace('rss','json')+"&Duration=0&format=jsonp&callback=?";
+
+$.getJSON(json,
+  function(data) {
+  var img = new Image();
+  
+    $.each(data.feed.entry, function(i,item) {
+        img.src = item.media$group.media$thumbnail[2].url.replace("s288","s1600");
+        $("<img/>").attr(
+            {
+            src : item.media$group.media$thumbnail[2].url.replace("s288","s1600"),
+            width : viewport.width,
+            height : viewport.height
+        }).appendTo("#coin-slider");
+        /*if(item.title.$t.toLowerCase().indexOf(".jpg") < 0)
+            $("<span/>").html(item.title.$t).appendTo("#coin-slider");*/
+    })
+$('#coin-slider').responsiveSlides({pager: true});
+
+    //$('#coin-slider').coinslider({ hoverPause: false , width: viewport.width, height : viewport.height, navigation: true, links : false, delay: image_delay });
+    //$("#coin-slider").show("scale",2000);
+  })
+  
+</script>
+
+
+
+  ]]>
+  </Content>
+</Module>
+
