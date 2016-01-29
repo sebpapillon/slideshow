@@ -13,6 +13,9 @@
   border: 0;
   }
   
+ul.a {
+    list-style-type: none;
+}
   
 .caption {
     position: absolute;
@@ -55,13 +58,8 @@ $.getJSON(json,
         img.src = item.media$group.media$thumbnail[2].url.replace("s288","s1600");
         $("#coin-slider").append(
 			$("<li>").append("<img src="+img.src+" width="+viewport.width+"><p class = caption>caption pour la photo</p>"));
-        /*if(item.title.$t.toLowerCase().indexOf(".jpg") < 0)
-            $("<span/>").html(item.title.$t).appendTo("#coin-slider");*/
     })
 $('#coin-slider').responsiveSlides();
-
-    //$('#coin-slider').coinslider({ hoverPause: false , width: viewport.width, height : viewport.height, navigation: true, links : false, delay: image_delay });
-    //$("#coin-slider").show("scale",2000);
   })
   
 </script>
