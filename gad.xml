@@ -12,6 +12,7 @@
   width: 50%;
   border: 0;
   }
+
   
 ul.rslides {
 	list-style-type: none;
