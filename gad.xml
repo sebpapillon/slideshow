@@ -13,8 +13,8 @@
   border: 0;
   }
   
-ul.a {
-    list-style-type: none;
+ul.rslides {
+	list-style-type: none;
 }
   
 .caption {
