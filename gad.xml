@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs title="gad" height="400" scaling="false" />
+  <UserPref name="scroll" display_name="Display scrollbar" default_value="auto" datatype="enum">
+    <EnumValue value="auto" display_value="Automatic"/>
+  </UserPref>
+  <UserPref name="album" diplay_name="nom de l'album" required="true" />
   <Content type="html">
   <![CDATA[
     <style>
@@ -34,33 +38,53 @@ ul.rslides {
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/ResponsiveSlides.js/1.53/responsiveslides.min.js"></script>
-
+<div id="info">..info...</div>
 <ul class="rslides" id="coin-slider"></ul>
 <script type="text/javascript">
 
 //$("#coin-slider").hide();
 
-//var prefs = new _IG_Prefs();
+var prefs = new _IG_Prefs();
 var rss="https://picasaweb.google.com/data/feed/base/user/107793413718694936117/albumid/6243671204235356865?alt=rss&kind=photo&hl=fr";
 var image_delay = 2000;
+var picasaweb = "https://picasaweb.google.com/data/feed/api/user/sebastien.papillon?alt=json";
+var albumName = "prefs.getString('album');
+var albumid = "";
 
 var viewport={width:400,height:300};
 
 //alert(viewport.width);
-if(rss=="")
-    alert("le flux vers l'album est manquant");  
-  json = rss.replace('rss','json')+"&Duration=0&format=jsonp&callback=?";
 
-$.getJSON(json,
+
+$.getJSON(picasaweb,
   function(data) {
-  var img = new Image();
-  
     $.each(data.feed.entry, function(i,item) {
-        img.src = item.media$group.media$thumbnail[2].url.replace("s288","s1600");
-        $("#coin-slider").append(
-			$("<li>").append("<img src="+img.src+" width="+viewport.width+"><p class = caption>caption pour la photo</p>"));
+		if(item.title.$t == albumName) {
+			albumid = item.id.$t;
+			json = albumid.replace('rss','json').replace('entry','feed').replace('api','base');
+
+			$.getJSON(json,
+			  function(datas) {
+			    $.each(datas.feed.entry, function(y,iteme) {
+					var img = new Image();
+					var size = "";
+					if(iteme.media$group.media$content[0].width/iteme.media$group.media$content[0].height < 1) {
+						img.src.height=viewport.height;
+						size = "height="+viewport.height;
+					} else {
+						size = "width="+viewport.width;
+						img.src.width=viewport.width;
+					}
+			        img.src = iteme.media$group.media$thumbnail[2].url.replace("s288","s1600");
+			        $("#coin-slider").append($("<li>").append("<img src="+img.src+" "+size+"><p class=\"caption\">caption ninja</p>"));
+			        $("#info").append(" <br> "+iteme.media$group.media$content[0].width/iteme.media$group.media$content[0].height+" - "+img.src);
+			    })
+			    
+				$('#coin-slider').responsiveSlides({pager: false});
+		
+			  })
+		} 
     })
-$('#coin-slider').responsiveSlides();
   })
   
 </script>
