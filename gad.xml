@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="gad" height="400" scaling="false" />
+  <ModulePrefs title="gad" height="400" scaling="false">
+	  <Require feature="dynamic-height"/>
+	  </ModulePrefs>
   <UserPref name="scroll" display_name="Display scrollbar" default_value="auto" datatype="enum">
     <EnumValue value="auto" display_value="Automatic"/>
   </UserPref>
