@@ -7,6 +7,16 @@
     <EnumValue value="auto" display_value="Automatic"/>
   </UserPref>
   <UserPref name="album" diplay_name="nom de l'album" required="true" />
+  <UserPref name="email" diplay_name="votre adresse mail" required="true" />
+  
+  <UserPref name="orientation" 
+     display_name="Orientation"
+     datatype="enum"
+     default_value="0">
+  <EnumValue value="0" display_value="Portrait"/>
+  <EnumValue value="1" display_value="Paysage"/>
+</UserPref>
+  
   <Content type="html">
   <![CDATA[
     <style>
@@ -50,9 +60,10 @@ var prefs = new _IG_Prefs();
 var viewport = gadgets.window.getViewportDimensions();
 var rss="https://picasaweb.google.com/data/feed/base/user/107793413718694936117/albumid/6243671204235356865?alt=rss&kind=photo&hl=fr";
 var image_delay = 2000;
-var picasaweb = "https://picasaweb.google.com/data/feed/api/user/sebastien.papillon?alt=json";
 var albumName = prefs.getString('album');
+var email = prefs.getString('email');
 var albumid = "";
+var picasaweb = "https://picasaweb.google.com/data/feed/api/user/"+email+"?alt=json";
 
 //var viewport={width:400,height:300};
 
@@ -85,7 +96,7 @@ $.getJSON(picasaweb,
 			        //$("#info").append(" <br> "+iteme.media$group.media$content[0].width/iteme.media$group.media$content[0].height+" - "+img.src);
 			    })
 			    
-				$('#coin-slider').responsiveSlides({pager: false});
+				$('#coin-slider').responsiveSlides({after: function(){gadgets.window.adjustHeight();}});
 		
 			  })
 		} 
