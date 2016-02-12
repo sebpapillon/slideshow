@@ -23,7 +23,7 @@
 <style>
 
 body {
-	background:transparent;
+	background:#(color_code);
 	height:200px;
 	width:100px;
 }
