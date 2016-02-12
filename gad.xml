@@ -90,7 +90,7 @@ $.getJSON(picasaweb,
 			    $.each(datas.feed.entry, function(y,iteme) {
 					var img = new Image();
 					var size = "";
-					if(iteme.media$group.media$content[0].width/iteme.media$group.media$content[0].height < 1) {
+					if(iteme.media$group.media$content[0].width/iteme.media$group.media$content[0].height < 1.25) {
 						img.src.height=viewport.height;
 						size = "height="+viewport.height;
 					} else {
