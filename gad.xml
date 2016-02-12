@@ -96,7 +96,11 @@ $.getJSON(picasaweb,
 			        //$("#info").append(" <br> "+iteme.media$group.media$content[0].width/iteme.media$group.media$content[0].height+" - "+img.src);
 			    })
 			    
-				$('#coin-slider').responsiveSlides({after: function(){gadgets.window.adjustHeight();}});
+				$('#coin-slider').responsiveSlides({after: function(){
+					gadgets.window.adjustHeight();
+					gadgets.window.adjustWidth();
+					}
+				});
 		
 			  })
 		} 
