@@ -19,8 +19,15 @@
   
   <Content type="html">
   <![CDATA[
-    <style>
+
 <style>
+
+body {background:#00ffff;
+height:200px;
+width:100px;
+}
+
+
 .rslides {
   display: block;
   height: auto;
