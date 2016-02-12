@@ -39,6 +39,8 @@ body {
   
 ul.rslides {
 	list-style-type: none;
+	display:table; 
+	margin:0 auto;
 }
   
 .caption {
