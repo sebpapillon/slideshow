@@ -22,9 +22,10 @@
 
 <style>
 
-body {background:#00ffff;
-height:200px;
-width:100px;
+body {
+	background:transparent;
+	height:200px;
+	width:100px;
 }
 
 
@@ -34,7 +35,7 @@ width:100px;
   float: left;
   width: 100%;
   border: 0;
-  }
+}
   
 
   
