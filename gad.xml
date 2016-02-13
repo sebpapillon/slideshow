@@ -59,7 +59,7 @@ ul.rslides {
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/ResponsiveSlides.js/1.53/responsiveslides.min.js"></script>
-<table border=2 width=100% ><tr>
+<table border=2 width=100% ><tr align=center>
 <td align=center><ul class="rslides" id="coin-slider"></ul></td>
 </tr></table>
 <script type="text/javascript">
